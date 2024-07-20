@@ -1,15 +1,8 @@
-#In this project we'll program the bill dispenser subsystem for an ATM, considering that the customer can request withdraws amounts with dollar-precision and the availability of the bills.
-
-#A customer will enter the amount of money they want to withdraw from their account, and we need to write the program that will select which bills, 
-#and how many of each bill to give the user back, always optimizing by using the bills of largest denomination.
-
-#The bills available are: $500, $100, $50, $25, $10, $5, $1.
-#The availability of each bill will be given in a form of dictionary in our input data for the function.
-
-
-
-
-#1st step is writing a function, which calculate the bills usage. It will recieve an amount of withdrawal and return a dictionary with the bill denomination and how many bills to use.
+'''
+1st step is writing a function, which calculates the bills usage. 
+Input: an amount of withdrawal.
+Output: a dictionary with the bill denomination and how many bills to use.
+'''
 
 def calculate_bills_to_use(amount):
     bills_of_num = []
@@ -24,9 +17,11 @@ def calculate_bills_to_use(amount):
     return bills_to_use
 
 
-#2nd step is writind a more complex function, which will recieve not only an amount of withdrawal, but the available bills in the ATM as a dictionary, and return a dictionary 
-#with the bill denomination and how many bills to use taking into account the availability of bills. 
-#The key is to check if the needed amount of bill is bigger than an available amount of that bill. 
+'''
+2nd function calculates the required number of bills of each denomination for a certain amount.
+Input: an amount of withdrawal and available bills in the ATM as a dictionary. 
+Output: a dictionary with the bill denomination and how many bills to use taking into account the availability of bills. 
+'''
 
 def calculate_bills_to_use_advanced(amount, bills):
     bills_of_num = []
